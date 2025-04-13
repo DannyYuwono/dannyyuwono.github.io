@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="My portfolio - showcasing web developer and UI designer projects with a focus on simple and effective digital solutions." />
+  <meta property="og:title" content="My Portfolio - Dataway" />
+  <meta property="og:description" content="Web Developer | UI Designer | Freelancer" />
+  <meta property="og:image" content="your-image-link.jpg" />
+  <meta property="og:url" content="https://your-website.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <title>My Portfolio - Dataway</title>
   <style>
+    :root {
+      --primary-color: #4a90e2;
+      --header-bg: #1e88e5;
+      --dark-bg: #121212;
+      --dark-text: #e0e0e0;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0; padding: 0;
@@ -12,7 +26,7 @@
       color: #333;
     }
     header {
-      background: #4a90e2;
+      background: var(--primary-color);
       color: white;
       padding: 40px 20px;
       text-align: center;
@@ -39,18 +53,18 @@
       font-size: 14px;
     }
     a {
-      color: #4a90e2;
+      color: var(--primary-color);
       text-decoration: none;
     }
 
     /* Dark mode support */
     @media (prefers-color-scheme: dark) {
       body {
-        background: #121212;
-        color: #e0e0e0;
+        background: var(--dark-bg);
+        color: var(--dark-text);
       }
       header {
-        background: #1e88e5;
+        background: var(--header-bg);
       }
       .project {
         background: #1e1e1e;
@@ -84,13 +98,13 @@
     <div class="project">
       <h3>Project 1 - Nama Project</h3>
       <p>Deskripsi singkat project ini. Apa fungsinya? Apa teknologi yang dipakai?</p>
-      <p><a href="#">Lihat Project</a></p>
+      <p><a href="javascript:void(0);" aria-label="View Project 1">Lihat Project</a></p>
     </div>
 
     <div class="project">
       <h3>Project 2 - Nama Project</h3>
       <p>Deskripsi singkat project ini juga.</p>
-      <p><a href="#">Lihat Project</a></p>
+      <p><a href="javascript:void(0);" aria-label="View Project 2">Lihat Project</a></p>
     </div>
     
   </section>
@@ -102,8 +116,13 @@
   </section>
 
   <footer>
-    &copy; 2025 Dataway. All rights reserved.
+    &copy; <span id="year"></span> Dataway. All rights reserved.
   </footer>
+
+  <script>
+    // Dynamically update the year in the footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
