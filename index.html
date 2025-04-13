@@ -1,128 +1,111 @@
+
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="My portfolio - showcasing web developer and UI designer projects with a focus on simple and effective digital solutions." />
-  <meta property="og:title" content="My Portfolio - Dataway" />
-  <meta property="og:description" content="Web Developer | UI Designer | Freelancer" />
-  <meta property="og:image" content="your-image-link.jpg" />
-  <meta property="og:url" content="https://your-website.com" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <title>My Portfolio - Dataway</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dannyyuwono Portfolio</title>
   <style>
-    :root {
-      --primary-color: #4a90e2;
-      --header-bg: #1e88e5;
-      --dark-bg: #121212;
-      --dark-text: #e0e0e0;
-    }
-
     body {
       font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
     }
     header {
-      background: var(--primary-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background: #333;
       color: white;
-      padding: 40px 20px;
-      text-align: center;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
     }
-    h1, h2 {
-      margin-bottom: 10px;
-    }
-    .project {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-      font-size: 14px;
-    }
-    a {
-      color: var(--primary-color);
+    nav a {
+      color: white;
+      margin: 0 10px;
       text-decoration: none;
     }
-
-    /* Dark mode support */
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: var(--dark-bg);
-        color: var(--dark-text);
-      }
+    .container {
+      padding: 1rem;
+    }
+    .projects, .contact {
+      margin-top: 2rem;
+    }
+    .project-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-width: 400px;
+    }
+    input, textarea, button {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    .dark-toggle {
+      cursor: pointer;
+      background: white;
+      border: none;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
       header {
-        background: var(--header-bg);
-      }
-      .project {
-        background: #1e1e1e;
-        box-shadow: 0 2px 5px rgba(255,255,255,0.05);
-      }
-      footer {
-        background: #222;
-        color: #aaa;
-      }
-      a {
-        color: #90caf9;
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Dataway</h1>
-    <p>Web Developer | UI Designer | Freelancer</p>
+    <div><strong>Dannyyuwono</strong></div>
+    <div>
+      <button class="dark-toggle" onclick="toggleDarkMode()">🌗 Mode</button>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="cv-dummy.pdf" download>📄 Download CV</a>
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Saya adalah seorang web developer dan UI designer yang suka membangun solusi digital yang sederhana dan efektif.</p>
-  </section>
+  <div class="container">
+    <section class="projects" id="projects">
+      <h2>My Projects</h2>
+      <div class="project-card">
+        <h3>My App</h3>
+        <p>Aplikasi mobile sederhana dengan Flutter.</p>
+      </div>
+      <div class="project-card">
+        <h3>Landing Page</h3>
+        <p>Halaman promosi menggunakan HTML/CSS.</p>
+      </div>
+    </section>
 
-  <section>
-    <h2>Projects</h2>
-    
-    <div class="project">
-      <h3>Project 1 - Nama Project</h3>
-      <p>Deskripsi singkat project ini. Apa fungsinya? Apa teknologi yang dipakai?</p>
-      <p><a href="javascript:void(0);" aria-label="View Project 1">Lihat Project</a></p>
-    </div>
-
-    <div class="project">
-      <h3>Project 2 - Nama Project</h3>
-      <p>Deskripsi singkat project ini juga.</p>
-      <p><a href="javascript:void(0);" aria-label="View Project 2">Lihat Project</a></p>
-    </div>
-    
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>Email: dataway@email.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/dataway" target="_blank">linkedin.com/in/dataway</a></p>
-  </section>
-
-  <footer>
-    &copy; <span id="year"></span> Dataway. All rights reserved.
-  </footer>
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <form action="https://formsubmit.co/your-email@example.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
 
   <script>
-    // Dynamically update the year in the footer
-    document.getElementById("year").textContent = new Date().getFullYear();
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
   </script>
-
 </body>
 </html>
