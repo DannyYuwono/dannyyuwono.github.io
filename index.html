@@ -1,117 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dannyyuwono Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-      background: #333;
-      color: white;
-    }
-    .dark-mode {
-      background-color: #121212;
-      color: #f0f0f0;
-    }
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    .container {
-      padding: 1rem;
-    }
-    .projects, .contact {
-      margin-top: 2rem;
-    }
-    .project-card {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      max-width: 400px;
-    }
-    input, textarea, button {
-      padding: 0.5rem;
-      font-size: 1rem;
-    }
-    .dark-toggle {
-      cursor: pointer;
-      background: white;
-      border: none;
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DannyYuwono | Home & Kitchen Finds</title>
+<meta name="description" content="Useful home and kitchen products, smart gadgets, organization ideas, storage solutions and practical finds.">
+<meta name="keywords" content="home products, kitchen gadgets, kitchen finds, home organization, storage solutions, useful products">
+
+<!-- Pinterest verification: paste the exact meta tag Pinterest gives you here. -->
+
+<meta property="og:title" content="DannyYuwono | Home & Kitchen Finds">
+<meta property="og:description" content="Useful home and kitchen products, smart gadgets and practical finds.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div><strong>Dannyyuwono</strong></div>
-    <div>
-      <button class="dark-toggle" onclick="toggleDarkMode()">🌗 Mode</button>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="cv-dummy.pdf" download>📄 Download CV</a>
-    </div>
-  </header>
+<header class="hero"><div class="wrap">
+<p class="eyebrow">HOME • KITCHEN • USEFUL FINDS</p>
+<h1>DannyYuwono</h1>
+<p class="hero-text">Practical home & kitchen finds that make everyday life easier.</p>
+<a class="button" href="#collections">Explore Finds</a>
+</div></header>
 
-  <div class="container">
-    <section class="projects" id="projects">
-      <h2>My Projects</h2>
-      <div class="project-card">
-        <h3>My App</h3>
-        <p>Aplikasi mobile sederhana dengan Flutter.</p>
-      </div>
-      <div class="project-card">
-        <h3>Landing Page</h3>
-        <p>Halaman promosi menggunakan HTML/CSS.</p>
-      </div>
-    </section>
+<main>
+<section class="intro wrap">
+<h2>Useful Products for Everyday Life</h2>
+<p>Discover kitchen gadgets, home organization products, storage solutions, cleaning tools and clever products worth checking out.</p>
+</section>
 
-    <section class="contact" id="contact">
-      <h2>Contact Me</h2>
-      <form action="https://formsubmit.co/your-email@example.com" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </div>
+<section id="collections" class="grid wrap">
+<article class="card"><div class="icon">🍳</div><h3>Kitchen Gadgets</h3><p>Useful kitchen tools, cooking gadgets and clever kitchen finds.</p></article>
+<article class="card"><div class="icon">🏠</div><h3>Home Products</h3><p>Practical home essentials, useful gadgets and everyday solutions.</p></article>
+<article class="card"><div class="icon">📦</div><h3>Organization & Storage</h3><p>Space-saving products, storage ideas and organization solutions.</p></article>
+<article class="card"><div class="icon">🧹</div><h3>Cleaning Finds</h3><p>Cleaning gadgets and products that can make household tasks easier.</p></article>
+</section>
 
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
-  <footer>
-  <div class="container">
-    <p>&copy; 2025 Dataway. All rights reserved.</p>
-    <p>Contact us: <a href="mailto:contact@dataway.com">contact@dataway.com</a></p>
-  </div>
-</footer>
+<section class="featured wrap">
+<div><p class="eyebrow">FEATURED FIND</p>
+<h2>Vacuum Storage Bags</h2>
+<p>Save closet space with vacuum storage bags for clothes, bedding and other bulky items. A practical solution for home organization and small spaces.</p>
+</div>
+<a class="button secondary" href="#">View Product</a>
+</section>
+
+<section class="seo wrap">
+<h2>What You'll Find Here</h2>
+<p>Home decor inspiration, kitchen gadgets, useful kitchen tools, home organization, storage solutions, cleaning products, space-saving ideas, smart home products and practical everyday finds.</p>
+</section>
+</main>
+
+<footer><div class="wrap"><p>© 2026 DannyYuwono • Home & Kitchen Finds</p></div></footer>
 </body>
 </html>
